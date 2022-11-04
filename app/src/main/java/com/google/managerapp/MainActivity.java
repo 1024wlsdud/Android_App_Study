@@ -5,7 +5,6 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -28,26 +27,26 @@ public class MainActivity extends AppCompatActivity {
         stopwatchFragment = new StopwatchFragment();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.containers, alarmFragment).commit();
-        NavigationBarView navigationBarView = findViewById(R.id.bottom_navigationview);
+        NavigationBarView navigationBarView = findViewById(R.id.Menubar);
         navigationBarView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.tab1:
                         // 첫 번째 프래그먼트 호출
-                        getSupportFragmentManager().beginTransaction().replace(R.id.timeFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.containers, timeFragment).commit();
                         return true;
                     case R.id.tab2:
                         // 두 번째 프래그먼트 호출
-                        getSupportFragmentManager().beginTransaction().replace(R.id.alarmFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.containers, alarmFragment).commit();
                         return true;
                     case R.id.tab3:
                         // 세 번째 프래그먼트 호출
-                        getSupportFragmentManager().beginTransaction().replace(R.id.stopwatchFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.containers, stopwatchFragment).commit();
                         return true;
                     case R.id.tab4:
                         // 네 번째 프래그먼트 호출
-                        getSupportFragmentManager().beginTransaction().replace(R.id.timerFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.containers, timerFragment).commit();
                         return true;
                 }
                 return false;
