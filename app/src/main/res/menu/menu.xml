@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/tab1"
+        android:title="시간"
+        app:showAsAction="always"
+/>
+    <item
+        android:id="@+id/tab2"
+        android:title="알람"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/tab3"
+        android:title="스톱워치"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/tab4"
+        android:title="타이머"
+        app:showAsAction="always"
+        />
+</menu>
